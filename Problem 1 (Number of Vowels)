@@ -1,0 +1,5 @@
+vowels = 0
+for word in s:
+    if word == 'a' or word == 'e' or word == 'i' or word == 'o' or word == 'u':
+        vowels += 1
+print ("Number of vowels:" + " " + str(vowels))   
