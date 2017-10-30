@@ -1,0 +1,7 @@
+bob = 0
+index= 0
+for letter in s:
+    index +=1
+    if letter == 'b' and s[index:index+2] == 'ob':
+        bob += 1       
+print ("Number of times bob occurs is:" + " "+ str(bob))
