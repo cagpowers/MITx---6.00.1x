@@ -1,0 +1,17 @@
+i = 0
+last_index = 0
+longest_sequence = []
+for letter in s:
+    i +=1
+    if i == len (s):
+        break
+    elif str(letter) > str(s[i]) and len(longest_sequence) < len(s[last_index:i]):
+        longest_sequence = s[last_index:i]
+        last_index = i
+    elif str(letter) > str(s[i]) and len(longest_sequence) > len(s[last_index:i]):
+        last_index = i
+    elif str(letter) > str(s[i]):
+        last_index = i
+    elif str(letter) < str(s[i]) and i+1 == len(s) and len(longest_sequence) < len(s[last_index:i+1]):
+        longest_sequence = s[last_index:i] + s[len(s)-1]
+print("Longest substring in alphabetical order is: " + str(longest_sequence))
