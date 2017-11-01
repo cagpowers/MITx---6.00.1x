@@ -1,0 +1,18 @@
+print("Please think of a number between 0 and 100!")
+maxVal = 100
+minVal = 0
+secret_number = ((maxVal + minVal)/2)
+x = "Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. "
+while True:
+    secret_number = int((maxVal + minVal)/2)
+    print("Is your secret number " + str(secret_number) + "?")
+    response = input(x)
+    if response == "l":
+       minVal = secret_number
+    elif response == "h":
+       maxVal = secret_number
+    elif response == "c":
+        print("Game over. Your secret number was: " + str(secret_number))
+        break
+    else:
+        print("Sorry, I did not understand your input.")
